@@ -68,6 +68,18 @@ filters.forEach((button) => button.addEventListener("click", () => {
 filters.forEach((button) => button.setAttribute("aria-pressed", String(button.classList.contains("selected"))));
 searchInput.addEventListener("input", updateCards);
 
+document.querySelectorAll(".pro-video-cover").forEach((button) => button.addEventListener("click", () => {
+  const videoId = button.dataset.youtubeId;
+  if (!/^[\w-]{11}$/.test(videoId)) return;
+  const player = document.createElement("iframe");
+  player.src = `https://www.youtube-nocookie.com/embed/${videoId}?autoplay=1&playsinline=1&rel=0`;
+  player.title = button.dataset.videoTitle;
+  player.allow = "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+  player.referrerPolicy = "strict-origin-when-cross-origin";
+  player.allowFullscreen = true;
+  button.parentElement.replaceChildren(player);
+}));
+
 const guideDialog = document.querySelector(".guide-dialog");
 const guideSteps = document.querySelector("#guide-steps");
 document.querySelectorAll("[data-guide]").forEach((button) => button.addEventListener("click", () => {
