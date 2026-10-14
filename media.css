@@ -2,6 +2,42 @@
   background: #edf1e5;
 }
 
+.sport-video-library {
+  grid-column: 1 / -1;
+  margin-top: 38px;
+}
+
+.sport-video-heading {
+  margin-bottom: 19px;
+}
+
+.sport-video-heading h3 {
+  margin: 7px 0;
+  color: var(--green);
+  font: 700 22px var(--display);
+  letter-spacing: -.5px;
+}
+
+.sport-video-heading p {
+  max-width: 650px;
+  margin: 0;
+  color: #68746c;
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.sport-video-library .media-gallery {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.mindset-section .sport-video-heading h3 {
+  color: var(--cream);
+}
+
+.mindset-section .sport-video-heading p {
+  color: #b8c2bb;
+}
+
 .media-gallery {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -100,6 +136,10 @@
   .media-gallery {
     grid-template-columns: 1fr;
     gap: 16px;
+  }
+
+  .sport-video-library .media-gallery {
+    grid-template-columns: 1fr;
   }
 
   .media-card figcaption {
