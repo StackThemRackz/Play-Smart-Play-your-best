@@ -20,6 +20,10 @@
   border: 1px solid rgba(22, 78, 59, .1);
 }
 
+.sport-video-library .media-frame {
+  aspect-ratio: 16 / 9;
+}
+
 .sport-category > h4 {
   margin: 0 0 14px;
   color: var(--green);
@@ -42,6 +46,26 @@
   color: var(--green);
   font: 700 12px var(--display);
   letter-spacing: .2px;
+}
+
+.skill-level {
+  display: inline-block;
+  margin-bottom: 8px;
+  padding: 4px 6px;
+  background: #e9efdc;
+  color: #587a2c;
+  font: 700 7px var(--display);
+  letter-spacing: .8px;
+}
+
+.skill-level.build {
+  background: #e3edf1;
+  color: #316987;
+}
+
+.skill-level.challenge {
+  background: var(--lime);
+  color: var(--green);
 }
 
 .sport-skill-library .media-gallery {
