@@ -31,6 +31,24 @@
   gap: 12px;
 }
 
+.sport-skill-library {
+  margin-top: 17px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(22, 78, 59, .14);
+}
+
+.sport-skill-library > h5 {
+  margin: 0 0 12px;
+  color: var(--green);
+  font: 700 12px var(--display);
+  letter-spacing: .2px;
+}
+
+.sport-skill-library .media-gallery {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
 .sport-video-heading {
   margin-bottom: 19px;
 }
@@ -98,6 +116,13 @@
   color: var(--green);
   font: 700 13px var(--display);
   letter-spacing: -.3px;
+}
+
+.media-card h6 {
+  margin: 0 0 8px;
+  color: var(--green);
+  font: 700 12px var(--display);
+  letter-spacing: -.2px;
 }
 
 .sport-category .media-card figcaption {
@@ -229,6 +254,10 @@
   }
 
   .sport-category .media-gallery {
+    grid-template-columns: 1fr;
+  }
+
+  .sport-skill-library .media-gallery {
     grid-template-columns: 1fr;
   }
 
